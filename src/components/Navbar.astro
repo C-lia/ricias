@@ -1,0 +1,37 @@
+---
+
+---
+
+<header>
+  <h1>c·lya</h1>
+  <nav>
+    <a href="#">inicio</a>
+    <a href="#">patata</a>
+    <a href="#">acerca de</a>
+    <a href="#">contacto</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    flex: 10;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > nav {
+      display: flex;
+      gap: 1rem;
+      & > a {
+        color: azure;
+      }
+    }
+  }
+</style>

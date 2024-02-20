@@ -1,0 +1,98 @@
+---
+
+---
+
+<aside>
+  <menu>
+    <ol>
+      <li>inicio</li>
+      <li>Galeria</li>
+      <li>Blog</li>
+      <li>Mensajes</li>
+      <li>Notificación</li>
+    </ol>
+  </menu>
+  <menu>
+    <ol>
+      <li>Ajustes</li>
+      <li>Salir</li>
+    </ol>
+  </menu>
+</aside>
+
+<style>
+  aside {
+    position: absolute;
+
+    width: 1.8rem;
+    height: 75dvh;
+    padding-block: 0.5rem;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    z-index: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    transition-duration: 0.3s;
+
+    &:hover {
+      width: 8rem;
+      transition-duration: 0.5s;
+    }
+
+    & > menu {
+      padding-inline-start: 0;
+      & > ol {
+        padding-inline-start: 0;
+        list-style-position: inside;
+        & > li {
+          cursor: pointer;
+          padding: 0.4rem;
+          /* list-style-image: url(./house-heart-fill.svg); */
+          &:hover {
+            background-color: aqua;
+          }
+        }
+      }
+    }
+
+    & > menu:first-child {
+      position: sticky;
+      top: 0;
+      left: 0;
+      & li:first-child {
+        position: relative;
+        list-style-image: url(./svg/house-heart-fill.svg);
+      }
+      & li:nth-child(2) {
+        list-style-image: url(./svg/images.svg);
+      }
+      & li:nth-child(3) {
+        list-style-image: url(./svg/chat-square-text-fill.svg);
+      }
+      & li:nth-child(4) {
+        list-style-image: url(./svg/envelope-fill.svg);
+      }
+      & li:last-child {
+        list-style-image: url(./svg/bell-fill.svg);
+      }
+    }
+
+    & > menu:last-child {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      & li:first-child {
+        list-style-image: url(./svg/gear.svg);
+      }
+      & li:last-child {
+        list-style-image: url(./svg/door-closed.svg);
+      }
+    }
+  }
+</style>
